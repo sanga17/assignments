@@ -16,7 +16,7 @@ class Stackarray
     public void push(int i)
     {
         if(top + 1 >= size)
-            throw new IndexOutOfBoundsException("the stack overflow");
+            return;/*throw new IndexOutOfBoundsException("the stack overflow");*/
         if(top + 1 < size )
             arr[++top] = i;
         len++ ;
@@ -25,7 +25,8 @@ class Stackarray
     public int pop()
     {
         if( isEmpty() )
-            throw new NoSuchElementException("the stack underflow");
+          return Integer.MIN_VALUE;
+            /*throw new NoSuchElementException("the stack underflow");*/
         len-- ;
         return arr[top--];
     }
@@ -56,7 +57,7 @@ class Stackarray
     /* To display  the stack */
     public void display()
     {
-        System.out.print("\nStack  ");
+        /*System.out.print("\nStack  ");*/
         if (len == 0)
         {
             System.out.print("Stack is Empty\n");
