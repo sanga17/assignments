@@ -1,0 +1,173 @@
+Farming Assistant Web Services
+
+login & register page for farmers
+login & register page for dealers
+login for admin
+complaints page write only by farmers add read only by dealers and read and edit by admin
+advertisement page for dealers
+get notification to farmers
+Ordering of seeds from dealers by farmers
+farmers wishlist,cartlist
+notifiaction(advertisement,exhibition,weather report,latest product price,upcoming agree training)
+dealer can respond to their complaints receivrd by farmers
+admin can update where the upcoming agricultural exhibition is.
+
+
+
+user
+  id
+  name
+  role_id
+  phone
+  email
+  address_id
+  password
+  create_at
+
+role
+  id
+  name
+
+admin
+  user_id
+  type
+
+address
+  id
+  user_id
+  village
+  taluka
+  district
+  pincode
+  state
+  counrty
+
+
+order
+  id
+  farmer_id
+  product_id
+  selling_price
+  product_qty
+  total_price
+  create_at
+
+Product
+  id
+  dealer_id
+  price
+  name
+  section_id
+  available
+  price
+  details
+  create_at
+
+product_section
+  id
+  name
+
+Complaints
+  id
+  farmer_id
+  dealer_id
+  type_id
+  message
+  create_at
+
+complaint_type
+  id
+  name
+  _
+Notification
+  id
+  type
+  publish_status
+
+Training
+  id
+  food_name
+  place
+  start_date
+  end_date
+  fees
+
+Advertisement
+  id
+  dealer_id
+  file
+  message
+  create_at
+
+Upcoming_agricultural_exhibition
+  id
+  type
+  place
+  date
+  fee
+`
+wheather_report
+  id
+  date
+  temprature
+  humidity
+  rainfall
+  wind
+
+chat_history
+  farmer_id
+  dealer_id
+  message
+  message_time
+
+Cart_list
+  id
+  farmer_id
+  dealer_id
+  product_id
+  product_qty
+  total_price
+  create_at
+
+wish_list
+  id
+  farmer_id
+  dealer_id
+  product_id
+
+bid_create
+  id
+  user_id
+  product_id
+  min_price
+  status_id
+  quantity
+
+bid_status
+  id
+  type
+
+user_bid
+  bid_id
+  buy_price
+  user_id
+
+Articles
+  id
+  name
+  auther
+  language
+
+review
+  id
+  reviewable_type
+  reviewable_id
+  message
+  ratings
+  create_at
+
+favorites
+  id
+  type
+  create_at
+
