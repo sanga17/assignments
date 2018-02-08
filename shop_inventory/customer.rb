@@ -16,18 +16,22 @@ class Customer
 
   def search_product()
     puts "Enetr the product id OR product name of product to be searched"
-    search_item=(gets.to_i)
+    search_item=gets.chomp
     product_obj=Product.new
     result=product_obj.search(search_item)
     puts result
-    puts "Enter 1:To buy this product "
-    var=gets.to_i
-    customer_obj_1=Customer.new
-    case var
-      when 1
-        Customer.order_product(search_item)
-      else
-        Customer.case_method
+    if result == 1
+      Customer.case_method
+    else
+      puts "Enter 1:To buy this product "
+      var=gets.to_i
+      customer_obj_1=Customer.new
+      case var
+        when 1
+          Customer.order_product(result[1])
+        else
+          Customer.case_method
+      end
     end
   end
 
@@ -49,7 +53,7 @@ class Customer
       when 2
         customer_obj_1.search_product
       when 3
-        customer_obj_1.order_product
+        customer_obj_1.search_product
       else
         p "please choose correct no"
     end

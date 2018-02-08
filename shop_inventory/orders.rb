@@ -2,19 +2,19 @@ require_relative 'customer'
 require_relative 'product'
 class Orders
   def self.make_payment(result)
-    if result[3].to_i > 0
-      puts "Enter quantity to buy of #{result[1]}"
+    if result[4].to_i > 0
+      puts "Enter quantity to buy of #{result[2]}"
       qty = gets.to_i
-      if qty > result[3].to_i
+      if qty > result[4].to_i
         puts "quantity is greater than available stock..."
-        ShopInventory.case_method
+        Customer.case_method
       else
-        total_price = qty * result[2].to_i
+        total_price = qty * result[3].to_i
         hash_1=Hash.new
         hash_1[:id] = (File_operation.get_id("orders_list.txt"))
-        hash_1[:name] = result[1].chomp
+        hash_1[:name] = result[2].chomp
         hash_1[:quantity] = qty
-        hash_1[:price] = result[2]
+        hash_1[:price] = result[3]
         hash_1[:total_price] = total_price
         puts "Total price is: #{total_price}\n"
         puts "Enter 1 to make order:"
@@ -23,9 +23,9 @@ class Orders
           when 1
             product_obj=Product.new
             product_obj.add(hash_1,"orders_list.txt")
-            result[3]=(result[3].to_i - qty).to_s
+            result[4]=(result[4].to_i - qty).to_s
             puts "order is completed"
-            File_operation.edit_stock(result[0].to_i , result)
+            File_operation.edit_stock(result[1].to_i , result)
             Customer.case_method
           else
             puts "Thank you...."

@@ -3,7 +3,7 @@ require_relative 'file_operation'
 class Shopkeeper
   def add_product
     hash_1=Hash.new
-    hash_1[:id] = (File_operation.get_id)
+    hash_1[:id] = (File_operation.get_id).to_i
     puts "Enetr the details of product"
     puts "Enter name: "
     hash_1[:name] = gets.chomp
@@ -44,18 +44,23 @@ class Shopkeeper
 
   def search_product
     puts "Enetr the product id OR product name of product to be searched"
-    search_item=(gets.to_i)
+    search_item = gets.chomp
+    puts "search_item: #{search_item}"
     product_obj=Product.new
     result=product_obj.search(search_item)
     puts result
-    puts "Enter 1:To edit this product "
-    var=gets.to_i
-    shopkeeper_obj_1=Shopkeeper.new
-    case var
-      when 1
-        shopkeeper_obj_1.edit_product
-      else
-        Shopkeeper.case_method
+    if result == 1
+      Shopkeeper.case_method
+    else
+      puts "Enter 1:To edit this product "
+      var=gets.to_i
+      shopkeeper_obj_1=Shopkeeper.new
+        case var
+          when 1
+            shopkeeper_obj_1.edit_product
+          else
+            Shopkeeper.case_method
+        end
     end
   end
 
