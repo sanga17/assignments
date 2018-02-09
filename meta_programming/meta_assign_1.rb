@@ -14,7 +14,8 @@ class MyBaseClass; end
 klass = Class.new(MyBaseClass) do
   ATTRIBUTES = attributes
   attr_accessor *ATTRIBUTES
-  def initialize(*args)
+  def initialize(args)
+    p args
     raise ArgumentError, "Too many arguments" if args.size > ATTRIBUTES.size
     ATTRIBUTES.zip(args) do |attr, val|
       send "#{attr}=", val
@@ -23,12 +24,14 @@ klass = Class.new(MyBaseClass) do
 end
 obj =Object.const_set name, klass
 obj.class
+# name1 = klass.new(headers)
+# puts name1.inspect
 name1 =name+'_'+"obj".downcase
 result.each do |result1|
   symbols = []
   result1.each { |string| symbols.push(string.to_sym) }
   name1 = klass.new(symbols)
-  puts name1
+   puts name1.inspect
   end
 #<Waterbottle:0x00000001f8eb60>
 #<Waterbottle:0x00000001f8e2f0>
