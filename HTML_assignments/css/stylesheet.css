@@ -1,0 +1,124 @@
+/*written by Sangmesh Ausekar for styling the second assignment of HTML and CSS*/
+body{
+  margin: 0px;
+  padding: 0px;
+}
+h1{
+  text-align: center;
+  font-size: 30;
+}
+
+.header{
+  background-color:maroon;
+  height: 120px;
+  padding: 10px;
+}
+.header img{
+  float:left;
+  padding-left: 20px;
+}
+.header h3{
+  padding-right: 20px;
+  text-align: right;
+}
+.main-body{
+  background-color: gray;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.middle-1{
+  height: 400px;
+}
+.middle-1 img{
+  height: 100%;
+  width:100%;
+}
+.middle-1 h2{
+  position: absolute;
+  color: red;
+  font-size: 22px;
+  padding-left: 350px;
+  padding-top: 110px;
+  text-transform: uppercase;
+}
+.middle-1 h3{
+  position: absolute;
+  color: red;
+  font-size: 22px;
+  padding-left: 1px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.portfolio{
+  text-align: center;
+  font-size: 20px;
+}
+.portfolio img{
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-radius: 30%;
+  height: 300px;
+  width: 350px;
+}
+.portfolio h2{
+  text-transform: capitalize;
+  background-color: pink;
+  text-align: center;
+  font-size: 20px;
+}
+.footer{
+  background-color:maroon;
+  margin: 0px;
+  padding: 0px;
+  color: red;
+}
+.footer a{
+  color: yellow;
+}
+.sample-link{
+  float: left;
+  padding-left: 20px;
+  text-transform: uppercase;
+
+}
+.sample-link a:hover {
+  opacity: 0.7;
+  color: black;
+}
+.social-sites{
+  display: inline;
+  float: right;
+  padding-right: 100px;
+}
+.office-map{
+  height: 150px;
+  width: 200px;
+  padding-top: 10px;
+  padding-left: 500px;
+  padding-bottom: 20px;
+}
+.fa {
+  padding: 10px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: blue;
+  color: white;
+}
+.fa:hover {
+  opacity: 0.7;
+  color: blue;
+  background-color: yellow;
+}
+
+.social-sites ul li {
+  float: left;
+  padding: 10px;
+  text-align: center;
+  list-style-type: none;
+
+}
+.social-sites h2{
+  text-align:center;
+}
