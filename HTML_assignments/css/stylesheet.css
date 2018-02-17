@@ -1,101 +1,123 @@
-/*written by Sangmesh Ausekar for styling the second assignment of HTML and CSS*/
-body{
+/*;written by Sangmesh Ausekar for styling the second assignment of HTML and CSS*/
+body {
   margin: 0px;
   padding: 0px;
 }
-h1{
+h1 {
   text-align: center;
-  font-size: 30;
+  font-size: 30px;
 }
-
-.header{
-  background-color:maroon;
-  height: 120px;
+.clear-fix {
+  clear: both;
+}
+.header {
+  background-color:#558C89;
   padding: 10px;
 }
-.header img{
+.header img {
   float:left;
   padding-left: 20px;
 }
-.header h3{
+.header h3 {
   padding-right: 20px;
   text-align: right;
 }
-.main-body{
-  background-color: gray;
+.main-body {
+  background-color: #ECECEA;
   padding-left: 50px;
   padding-right: 50px;
 }
-.middle-1{
-  height: 400px;
+.banner{
+  height: 500px;
 }
-.middle-1 img{
+.banner img {
   height: 100%;
   width:100%;
 }
-.middle-1 h2{
+.banner h2 {
   position: absolute;
-  color: red;
-  font-size: 22px;
-  padding-left: 350px;
+  color: black;
+  font-size: 20px;
   padding-top: 110px;
   text-transform: uppercase;
 }
-.middle-1 h3{
+.banner h3 {
   position: absolute;
-  color: red;
-  font-size: 22px;
+  color: black;
+  font-size: 18px;
   padding-left: 1px;
   padding-top: 10px;
   text-transform: uppercase;
 }
-.portfolio{
+.portfolio {
   text-align: center;
   font-size: 20px;
 }
-.portfolio img{
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-bottom: 10px;
+.portfolio img {
+  padding-left: 3%;
+  padding-bottom: 2%;
   border-radius: 30%;
-  height: 300px;
-  width: 350px;
+  height: 100%;
+  width: 28.33%;
 }
-.portfolio h2{
+.portfolio h2 {
   text-transform: capitalize;
-  background-color: pink;
+ /* background-color: maroon;*/
   text-align: center;
   font-size: 20px;
 }
-.footer{
-  background-color:maroon;
-  margin: 0px;
-  padding: 0px;
-  color: red;
+.up-arrow {
+  position: fixed;
+  bottom: 10px;
+  right: 30px
 }
-.footer a{
-  color: yellow;
+.up-arrow img {
+  height: 50px;
+  width: 50px;
 }
-.sample-link{
+.footer {
+}
+.set-float{
+  width: 100%;
+  display: initial;
+  color: black;
+}
+.set-float a {
+  color: black;
+}
+.set-float h2 {
+  text-align:center;
+  padding-left:30px;
+}
+.width-one-forth {
+  width: 33.33%;
+  background-color:#558C89;
   float: left;
-  padding-left: 20px;
+}
+.sample-links {
   text-transform: uppercase;
+  padding-bottom: 3%;
+  padding-top: 1%;
 
 }
-.sample-link a:hover {
-  opacity: 0.7;
+.sample-links a:hover {
+  opacity: 0.5;
   color: black;
 }
 .social-sites{
-  display: inline;
-  float: right;
-  padding-right: 100px;
+  padding-bottom: 4%;
+  padding-top: 1.1%;
 }
-.office-map{
-  height: 150px;
-  width: 200px;
+.social-sites ul li {
+  float: right;
+  padding: 10px;
+  text-align: center;
+  list-style-type: none;
+}
+.office-map {
+  text-align: center;
+  height: 50%;
   padding-top: 10px;
-  padding-left: 500px;
   padding-bottom: 20px;
 }
 .fa {
@@ -103,22 +125,73 @@ h1{
   width: 50px;
   text-align: center;
   text-decoration: none;
-  background: blue;
+  background: gray;
   color: white;
 }
 .fa:hover {
   opacity: 0.7;
   color: blue;
-  background-color: yellow;
+  background-color: black;
 }
-
-.social-sites ul li {
-  float: left;
-  padding: 10px;
-  text-align: center;
-  list-style-type: none;
-
+/****************************
+Media queries start here
+*****************************/
+@media(max-width: 767px) {
+  .header{
+    width: 100%;
+    text-align: center;
+  }
+  .header img {
+    float: none;
+    width:60%;
+  }
 }
-.social-sites h2{
-  text-align:center;
+@media(max-width: 767px) {
+  .main-body {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .banner{
+    height: 100%;
+  }
+  .banner img {
+    align-items: center;
+    height: 100%;
+    width:95%;
+  }
+  .portfolio img {
+    padding-left: 0px;
+    width: 90%;
+  }
+}
+@media(max-width: 767px) {
+  .footer {
+    width: 100%;
+  }
+  .width-one-forth{
+    width: 100%;
+    padding-right: 20px;
+    float: none;
+  }
+  .office-map {
+    width: 100%;
+    float: none;
+  }
+  .social-sites {
+    width: 100%;
+    float: none;
+  }
+  .social-sites ul li {
+    padding-right: 10px;
+    float: none;
+  }
+  .sample-links {
+    width: 100%;
+    /*float: right;*/
+  }
+
+  .fa {
+  padding: 15px;
+  }
 }
