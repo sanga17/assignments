@@ -155,3 +155,17 @@ array=[10,20,30,40];
 reverse_array(array);
 
 //the reverse array is: 40,30,20,10
+
+
+function sayHello(array) {
+  console.log(this.sayHello(array));
+}
+
+var context = {
+    sayHello(result) {
+        return 'Hello '+result+'.';
+    }
+}
+  firstName = 'Alex',
+  secondName = 'Perry';
+sayHello.apply(context,[firstName,secondName]);
