@@ -1,0 +1,53 @@
+ .clearfix {
+    clear: both;
+  }
+  .outer {
+    float: left;
+  }
+  .asending {
+    float: right;
+    padding-left: 50px;
+  }
+  .asending ol {
+    float: right;
+    padding-left: 50px;
+    float: right;
+  }
+  .asending li {
+    color: white;
+    background-color: gray;
+    height: 20px;
+    width: 200px;
+  }
+  .asending li:nth-child(even) {
+    background: black;
+  }
+  .desending {
+    float: right;
+    padding-left: 50px;
+  }
+  .desending ol {
+    padding-left: 50px;
+    float: right;
+  }
+  .desending li {
+    color: white;
+    background-color: black;
+    height: 20px;
+    width: 200px;
+  }
+  .desending li:nth-child(even) {
+    background: gray;
+  }
+  #switchboard {
+    background-color: red;
+    width: 400px;
+    height: 200px;
+    padding-top: 200px;
+    text-align: center;
+    float: left;
+  }
+  #switch {
+    background-color: yellow;
+    width: 100px;
+  }
